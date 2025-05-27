@@ -1,0 +1,25 @@
+package crt;
+class ThreadEx extends Thread 
+{
+	public void run()
+	{
+		System.out.println("Thread is running using thread extend");
+	}
+}
+class MyThreadEx implements Runnable
+{
+	public void run()
+	{
+		System.out.println("Thread is running using thread implement");
+	}
+}
+public class MultiThreading {
+	public static void main(String args[])
+	{
+		ThreadEx te=new ThreadEx();
+		MyThreadEx mte=new MyThreadEx();
+		te.run();
+		mte.run();
+	}
+
+}
