@@ -1,0 +1,27 @@
+package crt;
+class Animal {
+    void makeSound() {
+        System.out.println("Generic animal sound");
+    }
+}
+
+class Dogg extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Woof!");
+    }
+
+    void bark() {
+        System.out.println("Bark!");
+    }
+}
+public class Upcasting {
+    public static void main(String[] args) {
+        Dogg myDog = new Dogg();
+        Animal myAnimal = new Dogg(); // Upcasting: Dog object is now referenced as an Animal
+        Dogg my_Dog = (Dogg) myAnimal; // Explicit downcasting
+        my_Dog.makeSound();
+        my_Dog.bark(); 
+        myAnimal.makeSound();
+    }
+}
